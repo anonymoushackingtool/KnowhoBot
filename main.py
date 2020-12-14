@@ -1,7 +1,7 @@
 import json
 from pyrogram import Client, filters
 from firebase import firebase
-from process import check, searches, truecaller_search, fb_search, logreturn, log, eyecon_search
+from process import check, searches, truecaller_search, fb_search, logreturn, log
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from creds import cred
 
@@ -26,20 +26,20 @@ def start(client, message):
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Bot`            : [knowhobot](t.me/knowhobot)\n`Creator :` [agentnova](t.me/agentnova)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+        callback_query.message.edit(text=f"`Bot`            : [Truecaller Offical](t.me/Truecaller_Offical_bot)\n`Creator :` [SILENCE ANDROID GAMER](t.me/Silence_Android_Gamer)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Give Feedback", url="t.me/agentnova")]]))
+            [[InlineKeyboardButton("Join Our Channel", url="t.me/Silence_Android_Gamer")]]))
     elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/agentnova/KnowhoBot", disable_web_page_preview=True)
+        callback_query.message.edit(text="https://play.google.com/store/apps/details?id=com.truecaller", disable_web_page_preview=True)
 
 
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"`Bot`            : [knowhobot](t.me/knowhobot)\n`Creator :` [agentnova](t.me/agentnova)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+                        text=f"`Bot`            : [Truecaller Offical](t.me/Truecaller_Offical_bot)\n`Creator :` [SILENCE ANDROID GAMER](t.me/Silence_Android_Gamer)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Feedback", url="t.me/agentnova")]]))
+            [[InlineKeyboardButton("Join our Channel", url="t.me/Silence_Android_Gamer")]]))
 
 
 @app.on_message(filters.command(["log"]))
@@ -100,16 +100,7 @@ def echo(client, message):
                 temp = json.dumps(rslt).replace('[', '').replace(']', '')
                 jsonload = json.loads(temp)
 
-                yk = f"\n\n**----••Eyecon says----**\n\nName :`{jsonload['name']}`"
-                frbseyename = jsonload["name"]
-                if "facebook.com" in fbrslt:
-                    yk = f"\n\n**----••Eyecon says----**\n\nName : `{jsonload['name']}`\nFacebook : {fbrslt}"
-                    frbseyename = jsonload["name"]
-                    frbsefb = fbrslt
-            else:
-                yk = "**----••Eyecon says----**\n\nNo results found 🤦🏻‍♂️"
-        else:
-            yk = "**----••Eyecon says----**\n\nNo results found 🤦🏻‍♂️"
+                
 
         yk += pq
         pro.edit(text=yk, disable_web_page_preview=True,reply_markup=InlineKeyboardMarkup(
