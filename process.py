@@ -65,21 +65,6 @@ def truecaller_search(token, num):
 
     return tresponse
 
-def eyecon_search(num):
-    url = "https://api.eyecon-app.com/app/getnames.jsp?cli=91" + num + "&lang=en&is_callerid=true&is_ic=true&cv=vc_312_vn_2.0.312_a&requestApi=URLconnection&source=Other"
-    headers = {
-        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; GM1903 Build/QKQ1.190716.003)",
-        "Accept": "application/json",
-        "Accept-Encoding": "gzip",
-        "Connection": "Keep-Alive",
-        "e-auth-v": cred.E_AUTH_V,
-        "e-auth-c": cred.E_AUTH_C,
-        "e-auth": cred.E_AUTH,
-        "content-type": "application/x-www-form-urlencoded",
-        "Host": "api.eyecon-app.com"
-    }
-    response = requests.post(url, headers=headers, timeout=5)
-    return response
 
 def fb_search(num):
     fburl = "https://api.eyecon-app.com/app/pic?cli=91" + num + "&is_callerid=true&size=big&type=0&cancelfresh=0&cv=vc_312_vn_2.0.312_a"
