@@ -109,7 +109,7 @@ def echo(client, message):
         log()
         if frbseyename and frbsefb and frbsetrname and frbsetrmail:
             data = {
-                "Eyecon Name": frbseyename,
+     
                 "Mob": num,
                 "Truecaller name": frbsetrname,
                 "Facebook": frbsefb,
@@ -118,7 +118,7 @@ def echo(client, message):
             firebase.put('/knowho-log', num, data)
         elif frbseyename and frbsefb and frbsetrname:
             data = {
-                "Eyecon Name": frbseyename,
+     
                 "Mob": num,
                 "Truecaller name": frbsetrname,
                 "Facebook": frbsefb
@@ -126,14 +126,14 @@ def echo(client, message):
             firebase.put('/knowho-log', num, data)
         elif frbseyename and frbsefb:
             data = {
-                "Eyecon Name": frbseyename,
+      
                 "Mob": num,
                 "Facebook": frbsefb
             }
             firebase.put('/knowho-log', num, data)
         elif frbseyename and frbsetrname and frbsetrmail:
             data = {
-                "Eyecon Name": frbseyename,
+
                 "Mob": num,
                 "Truecaller name": frbsetrname,
                 "Mail": frbsetrmail
@@ -141,7 +141,7 @@ def echo(client, message):
             firebase.put('/knowho-log', num, data)
         elif frbseyename and frbsetrname:
             data = {
-                "Eyecon Name": frbseyename,
+   
                 "Mob": num,
                 "Truecaller name": frbsetrname
             }
