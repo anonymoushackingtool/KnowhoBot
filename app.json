@@ -24,19 +24,8 @@
     "T_AUTH": {
       "description": "Your Truecaller auth_id from truecaller app request headers",
       "value": ""
-    },
-    "E_AUTH": {
-      "description": "Your Eyecon auth_id from eyecon app request headers",
-      "value": ""
-    },
-    "E_AUTH_V": {
-      "description": "Your Eyecon e_auth_v value from eyecon app request headers",
-      "value": ""
-    },
-    "E_AUTH_C": {
-      "description": "Your Eyecon e_auth_c value from eyecon app request headers",
-      "value": ""
     }
+    
   },
   "buildpacks": [
     {
